@@ -1,0 +1,15 @@
+C:\Users\Maissa\Exos-C#Net\exo\bin\Debug\net9.0\exo.exe
+C:\Users\Maissa\Exos-C#Net\exo\bin\Debug\net9.0\exo.deps.json
+C:\Users\Maissa\Exos-C#Net\exo\bin\Debug\net9.0\exo.runtimeconfig.json
+C:\Users\Maissa\Exos-C#Net\exo\bin\Debug\net9.0\exo.dll
+C:\Users\Maissa\Exos-C#Net\exo\bin\Debug\net9.0\exo.pdb
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\exo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\exo.AssemblyInfoInputs.cache
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\exo.AssemblyInfo.cs
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\exo.csproj.CoreCompileInputs.cache
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\exo.dll
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\refint\exo.dll
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\exo.pdb
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\exo.genruntimeconfig.cache
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\ref\exo.dll
+C:\Users\Maissa\Exos-C#Net\exo\obj\Debug\net9.0\exo.sourcelink.json
