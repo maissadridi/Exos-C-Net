@@ -10,7 +10,7 @@ public class Article
     }
 }
 
-public class Video
+public class Video : Article
 {
     protected TimeSpan duree;
     
@@ -20,13 +20,13 @@ public class Video
     }
 }
 
-public class Livre
+public class Livre : Article
 {
     protected string isbn;
     protected int nbPages;
 }
 
-public class Disque
+public class Disque : Article
 {
     protected string label;
     
@@ -36,11 +36,11 @@ public class Disque
     }
 }
 
-public class Proche
+public class Proche : Livre
 {
     private string categorie;
 }
 
-public class Broche
+public class Broche : Livre
 {
 }
