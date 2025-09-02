@@ -27,7 +27,7 @@ namespace LesBases.Test
             }
 
             // --- Classe abstraite : Publication.PublishDetails() ---
-            Console.WriteLine("\n=== Test Publication (PublishDetails) ===");
+            Console.WriteLine("\n\n=== Test Publication (PublishDetails) ===");
             foreach (var a in articles)
             {
                 if (a is Publication p)
@@ -36,7 +36,23 @@ namespace LesBases.Test
                 }
             }
 
-        
+            // --- Délégués : DiscountStrategy ---
+            Console.WriteLine("\n\n=== Test DiscountStrategy (remises) ===");
+            DiscountStrategy strat10 = DiscountStrategies.Remise10Pourcent;
+            DiscountStrategy stratType = DiscountStrategies.RemiseParType;
+
+            foreach (var a in articles)
+            {
+                decimal remise = strat10(a);
+                Console.WriteLine($"{a.Titre} : remise 10% = {remise:0.00}€ | prix après remise = {a.Prix - remise:0.00}€");
+            }
+
+            foreach (var a in articles)
+            {
+                decimal remise = stratType(a);
+                Console.WriteLine($"{a.Titre} : remise par type = {remise:0.00}€ | prix après remise = {a.Prix - remise:0.00}€");
+            }
+
         }
 
       
