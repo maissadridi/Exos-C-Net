@@ -1,42 +1,32 @@
 using System;
 
-namespace LesBases.Article;
-public struct Article
+namespace LesBases
 {
-    public string Nom;
-    public decimal Prix;
-    public int Quantite;
-
-    //Constructeur
-
-    public Article(string nom, decimal prix, int quantite)
+    public class Article
     {
-        Nom = nom;
-        Prix = prix;
-        Quantite = quantite;
-    }
+        public string Titre { get; }
+        public decimal Prix { get; private set; }
 
-    //Méthodes
-
-    public void Afficher()
-    {
-        Console.WriteLine($"Nom: {Nom}, Prix: {Prix}, Quantité: {Quantite}");
-    }
-    public void Ajouter(int quantite)
-    {
-        Quantite += quantite;
-        Console.WriteLine($"{quantite} articles ajoutés. Nouvelle quantité: {Quantite}");
-    }
-    public void Retirer(int quantite)
-    {
-        if (quantite <= Quantite)
+        public Article(string titre, decimal prix)
         {
-            Quantite -= quantite;
-            Console.WriteLine($"{quantite} articles retirés. Quantité restante: {Quantite}");
+            Titre = titre;
+            Prix = prix;
         }
-        else
+
+        // Méthode pour appliquer une remise
+        public void AppliquerRemise(decimal montant)
         {
-            Console.WriteLine("Quantité insuffisante pour le retrait.");
+            if (montant < 0)
+               { Console.WriteLine("Le montant de la remise ne peut pas être négatif.");
+                return;}
+                
+            Prix = Math.Max(0, Prix - montant);
+        }
+
+        // ToString
+        public override string ToString()
+        {
+            return $"{GetType().Name} — {Titre} ({Prix}€)";
         }
     }
 }

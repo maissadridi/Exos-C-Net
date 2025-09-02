@@ -1,31 +1,28 @@
 using System;
-using LesBases.ArticleType;
+using LesBases;
 
 namespace LesBases.Test
 {
     class TestPremierTP
     {
-       public static void TestDuPremierTP()
+        public static void TestDuPremierTP()
         {
-            LesBases.ArticleType.ArticleType[] articles = new LesBases.ArticleType.ArticleType[3];
-            articles[0] = new LesBases.ArticleType.ArticleType("Pommes", 2.99m, 20, TypeArticle.Alimentaire);
-            articles[1] = new LesBases.ArticleType.ArticleType("T-shirt", 19.99m, 15, TypeArticle.Habillement);
-            articles[2] = new LesBases.ArticleType.ArticleType("Casque", 49.99m, 5, TypeArticle.Electronique);
+            // Création d'un tableau d'articles typés
+            ArticleType[] articles = new ArticleType[3];
+            articles[0] = new ArticleType("Pommes", 2.99m, TypeArticle.Alimentaire);
+            articles[1] = new ArticleType("T-shirt", 19.99m, TypeArticle.Habillement);
+            articles[2] = new ArticleType("Casque", 49.99m, TypeArticle.Loisir); // remplace Electronique par Loisir
 
             Console.WriteLine("Articles initiaux :");
             foreach (var article in articles)
             {
-                article.Afficher();
+                article.PublishDetails();
             }
 
-            articles[0].Ajouter(10);    
-            articles[1].Retirer(3);     
-            articles[2].Ajouter(2);     
-
-            Console.WriteLine("\nArticles après modification :");
+            Console.WriteLine("\nCoûts de location :");
             foreach (var article in articles)
             {
-                article.Afficher();
+                Console.WriteLine($"{article.Titre} => location {article.CalculateRent():0.00}€");
             }
         }
     }
