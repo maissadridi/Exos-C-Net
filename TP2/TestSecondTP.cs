@@ -6,6 +6,14 @@ namespace LesBases.Test
 {
     class TestSecondTP
     {
+        public List<Article> articles = new List<Article>();
+
+        public Article this[int index]
+        {
+            get => articles[index];
+            set => articles[index] = value;
+        }
+
         public static void Run()
         {
             var articles = new List<Article>
@@ -16,6 +24,7 @@ namespace LesBases.Test
                 new Video("Inception", "Blu-ray", 19.99m),
                 new ArticleType("Pommes", 2.99m, TypeArticle.Alimentaire)
             };
+            
 
             Console.WriteLine("=== Test IRentable (CalculateRent) ===");
             foreach (var a in articles)
@@ -26,7 +35,6 @@ namespace LesBases.Test
                 }
             }
 
-            // --- Classe abstraite : Publication.PublishDetails() ---
             Console.WriteLine("\n\n=== Test Publication (PublishDetails) ===");
             foreach (var a in articles)
             {
@@ -36,7 +44,6 @@ namespace LesBases.Test
                 }
             }
 
-            // --- Délégués : DiscountStrategy ---
             Console.WriteLine("\n\n=== Test DiscountStrategy (remises) ===");
             DiscountStrategy strat10 = DiscountStrategies.Remise10Pourcent;
             DiscountStrategy stratType = DiscountStrategies.RemiseParType;

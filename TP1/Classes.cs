@@ -8,6 +8,7 @@ public class Article
     {
         designation = "";
         prix = 0.0m;
+        
     }
     public string GetDesignation()
     {

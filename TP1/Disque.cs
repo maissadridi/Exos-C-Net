@@ -17,7 +17,6 @@ namespace LesBases
             Console.WriteLine($"Disque: '{Titre}' — Durée: {DureeMinutes} min — Prix: {Prix}€");
         }
 
-        // Règle location : 2.00€ + 3% du prix
         public decimal CalculateRent() => 2.00m + (0.03m * Prix);
     }
 }
