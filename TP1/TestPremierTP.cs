@@ -11,7 +11,7 @@ namespace LesBases.Test
             ArticleType[] articles = new ArticleType[3];
             articles[0] = new ArticleType("Pommes", 2.99m, TypeArticle.Alimentaire);
             articles[1] = new ArticleType("T-shirt", 19.99m, TypeArticle.Habillement);
-            articles[2] = new ArticleType("Casque", 49.99m, TypeArticle.Loisir); // remplace Electronique par Loisir
+            articles[2] = new ArticleType("Casque", 49.99m, TypeArticle.Loisir); 
 
             Console.WriteLine("Articles initiaux :");
             foreach (var article in articles)

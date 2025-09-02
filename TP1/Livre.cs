@@ -21,7 +21,6 @@ namespace LesBases
             Console.WriteLine($"Livre: '{Titre}' par {Auteur} — Catégorie: {Categorie} — Prix: {Prix}€");
         }
 
-        // Règle location : base 1.50€ + 5% du prix; +0.50€ si Broché
         public decimal CalculateRent()
         {
             decimal rent = 1.50m + (0.05m * Prix);
